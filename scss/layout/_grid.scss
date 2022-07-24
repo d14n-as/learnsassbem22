@@ -21,6 +21,18 @@
 
     &__main { 
         background-color: hsl(240, 98%, 51%);
+
+        @include u.breakpoint(medium) {
+            background-color: hsl(120, 100%, 25%);
+        }
+
+        @include u.breakpoint(large) {
+            background-color: hsl(39, 100%, 35%);
+        }
+
+        @include u.breakpoint(large) {
+            background-color: hsl(0, 100%, 50%);
+        }
     }
 
     &__sidebar {
