@@ -1,0 +1,35 @@
+// small = <700px 
+// medium = 700px - 900px 
+// large = 900px - 1440px 
+// extra large = >1440px 
+
+// Sass Map 
+$breakpoints-up: (
+    // 700 divided 16 
+    'medium': 43.75em,
+    // 900 divided 16 
+    'large': 56.35em,
+    // 1440 divided 16 
+    'xlarge': 90em
+);
+
+$breakpoints-down: (
+    // 699.98 divided 16
+    'small': 43.7485em,
+    // 899.98 divided 16
+    'medium': 56.24875em,
+    // 1439.98 divided 16
+    'large': 89.99875em 
+);
+
+@mixin breakpoint($size) {
+    @media (min-width: map-get($breakpoints-up, $size)) {
+        @content;
+    }
+}
+
+@mixin breakpoint($size) {
+    @media (max-width: mag-get($breakpoints-down, $size)) {
+        @content;
+    }
+} 
