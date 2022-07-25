@@ -1,3 +1,5 @@
+@use 'functions' as f;
+
 // small = <700px 
 // medium = 700px - 900px 
 // large = 900px - 1440px 
@@ -6,20 +8,20 @@
 // Sass Map 
 $breakpoints-up: (
     // 700 divided 16 
-    'medium': 43.75em,
+    'medium': f.em(700),
     // 900 divided 16 
-    'large': 56.35em,
+    'large': f.em(900),
     // 1440 divided 16 
-    'xlarge': 90em
+    'xlarge': f.em(1440)
 );
 
 $breakpoints-down: (
     // 699.98 divided 16
-    'small': 43.7485em,
+    'small': f.em(699.98),
     // 899.98 divided 16
-    'medium': 56.24875em,
+    'medium': f.em(899.98),
     // 1439.98 divided 16
-    'large': 89.99875em 
+    'large': f.em(1439.98) 
 );
 
 @mixin breakpoint($size) {
