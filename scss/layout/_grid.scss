@@ -5,7 +5,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     gap:u.rem(40);
-    width: min(100% - u.rem(40), 1100px);
+    width: min(100% - u.rem(40), u.rem(1100));
     margin-inline:auto;
 
     @include u.breakpoint(large) {
